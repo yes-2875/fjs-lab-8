@@ -76,3 +76,10 @@ student.courses = [...student.courses, ...newCourses];
 // Print out student.courses again
 console.log("merged student.courses: " + student.courses);
 
+// BONUS TASK: Use reduce method to calculate the average score from the array of scores.
+let sum = scores.reduce(function(prev, current) {
+    return prev + current;
+});
+
+const average = sum / scores.length;
+console.log("average of scores array using .reduce(): " + average);

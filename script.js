@@ -48,6 +48,7 @@ const {name, courses} = student;
 // Create an array of scores, then destructure the first two scores from it.
 const scores = [29, 63, 91, 95, 82, 67];
 const [first, second] = scores;
+console.log("first two scores: " + first + ", " + second);
 
 // Part 4: The Spread Operator
 // Use spread operator (...) to clone student object
@@ -55,3 +56,9 @@ const [first, second] = scores;
 let clonedStudent = {...student, graduationYear: 2028};
 console.log("clonedStudent.graduationYear: " + clonedStudent.graduationYear);
 
+// Merge student.courses with another array of courses using spread operator
+const newCourses = ["CPAN 112", "CPAN 121", "CPAN 131", "CPAN 144", "GNED 101", "WRIT 220"];
+student.courses = [...student.courses, ...newCourses];
+
+// Print out student.courses again
+console.log("merged student.courses: " + student.courses);

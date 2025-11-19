@@ -6,8 +6,21 @@ function Student(name, age, enrolled, courses) {
     this.enrolled = enrolled;
     this.courses = courses;
     
+    // Display basic student information
     this.displayInfo = function() {
         return `Student Name: ${this.name}\nAge: ${this.age} years old\nIs enrolled: ${this.enrolled}\nCourses: ${this.courses}`;
+    };
+    
+    // Part 5: Object Methods
+    // Method to add a new course to the courses array, and return the added course
+    this.addCourse = function(course) {
+        this.courses.push(course);
+        return course;
+    };
+    
+    // Method to calculate and return total number of courses
+    this.totalCourses = function() {
+        return courses.length;
     }
 }
 
@@ -62,3 +75,4 @@ student.courses = [...student.courses, ...newCourses];
 
 // Print out student.courses again
 console.log("merged student.courses: " + student.courses);
+
